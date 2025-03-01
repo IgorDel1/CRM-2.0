@@ -1,0 +1,338 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #c5c1c1;
+    padding: 20px 0;
+    border-bottom: 1px solid #afaeae;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    /* Распределение элементов */
+    align-items: center;
+    /* Вертикальное выравнивание */
+    max-width: 1200px;
+    /* Максимальная ширина контейнера */
+    margin: 0 auto;
+    /* Центрирование контейнера */
+    padding: 0 20px;
+    /* Отступы от краев */
+}
+
+.header_admin {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header_link {
+    list-style-type: none;
+    /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Горизонтальное размещение элементов списка */
+    justify-content: center;
+    /* Центрирование элементов списка */
+    flex-grow: 1;
+    /* Позволяет списку занимать доступное пространство */
+}
+
+.header_link li {
+    margin: 0 30px;
+    /* Отступы между элементами списка */
+}
+
+.header_link a {
+    text-decoration: none;
+    /* Убираем подчеркивание ссылок */
+    color: #333;
+    /* Цвет текста ссылок */
+}
+
+.header_login {
+    text-decoration: none;
+    /* Убираем подчеркивание ссылки "Выйти" */
+    color: #ff0000;
+    /* Цвет текста ссылки "Выйти" */
+}
+
+.header_login:hover {
+    text-decoration: none;
+    /* Убираем подчеркивание ссылки "Выйти" */
+    color: #860606;
+    /* Цвет текста ссылки "Выйти" */
+}
+
+main {
+    padding: 30px 0;
+    /* Отступы сверху и снизу для main */
+    background-color: #f9f9f9;
+    /* Цвет фона для main */
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.filters .container {
+    max-width: 80%;
+    /* Ширина контейнера в main - 80% от родителя */
+    margin: 0 auto;
+    /* Центрирование контейнера внутри секции фильтров */
+}
+
+.filters label {
+    display: block;
+    /* Блочный элемент для лейбла */
+    margin-bottom: 8px;
+    /* Отступ снизу лейбла */
+    margin-top: 18px;
+    font-weight: bold;
+    /* Жирный шрифт для лейбла */
+}
+
+.filters input[type="text"],
+.filters select {
+    width: calc(100% - 22px);
+    /* Учитываем отступы */
+    padding: 2px;
+    margin-top: 2px;
+    /* Отступ сверху поля ввода/выбора */
+    border-radius: 4px;
+    border: 1px solid #828282;
+    /* Граница поля ввода/выбора */
+}
+
+.filters input[type="text"]:focus,
+.filters select:focus {
+    border-color: #4CAF50;
+    /* Цвет границы при фокусе */
+    outline: none;
+    /* Убираем обводку при фокусе */
+}
+.filters button{
+    width: calc(100% - 22px);
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.filters button:hover{
+    background-color: #318534;
+}
+
+.search {
+    display: block;
+    width: calc(100% - 22px);
+    padding: 10px;
+    background-color: #828282;
+    border: 1px solid black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.search:hover {
+    background-color: #666666;
+}
+
+.checkbox-wrapper {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.checkbox-wrapper input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+
+}
+.checkbox-wrapper label {
+    margin: 0;
+    font-weight: 200;
+    display: inline;
+}
+
+.orders {
+    margin-top: 60px;
+    /* Отступ сверху для секции клиентов */
+}
+
+.orders table {
+    width: 100%;
+    /* Ширина таблицы 100% */
+    border-collapse: collapse;
+    /* Убираем двойные границы между ячейками */
+}
+
+.orders th,
+.orders td {
+    padding: 12px;
+    /* Отступы внутри ячеек */
+    text-align: left;
+    /* Выравнивание текста по левому краю */
+    border: 1px solid black;
+    /* Нижняя граница ячеек */
+}
+
+.orders th {
+    background-color: #b3aeae;
+    /* Цвет фона заголовков */
+    font-weight: bold;
+    /* Жирный шрифт для заголовков */
+}
+
+.orders tr:hover {
+    background-color: #f1f1f1;
+    /* Цвет фона строки при наведении */
+}
+
+.orders i {
+    cursor: pointer;
+    /* Курсор в виде указателя на иконках */
+}
+
+.orders td i:hover {
+    color: #4CAF50;
+    /* Цвет иконок при наведении */
+}
+
+.orders_title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.orders_add {
+    position: sticky;
+    top: 16px;
+    margin-left: 7%;
+}
+
+.orders_add:hover {
+    color: #4CAF50;
+}
+
+.modal__content form {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__content label {
+    margin-bottom: 5px;
+}
+
+.modal__content input {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.modal__content input:focus {
+    border-color: #4CAF50;
+    /* Цвет границы при фокусе */
+    outline: none;
+}
+
+.modal__content button {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    /* Отступ сверху */
+}
+
+.create {
+    background-color: #4CAF50;
+}
+
+.cancel {
+    background-color: #e9300f;
+}
+.order .order_number{
+    color: black; 
+    font-weight: 900;
+}
+.order .order_total{
+    color: orange; 
+    font-weight: 800;
+}
+.order_items {
+    width: 100%; /* Ширина таблицы 100% */
+    margin-top: 15px;
+    border-collapse: collapse; /* Убираем двойные границы между ячейками */
+}
+
+.order_items th,
+.order_items td {
+    padding: 12px; /* Отступы внутри ячеек */
+    text-align: left; /* Выравнивание текста по левому краю */
+    border: 1px solid black; /* Нижняя граница ячеек */
+}
+
+.order_items th {
+    background-color: #b3aeae; /* Цвет фона заголовков */
+    font-weight: bold; /* Жирный шрифт для заголовков */
+}
+
+.order_items tr:hover {
+    background-color: #f1f1f1; /* Цвет фона строки при наведении */
+}
+.main-select {
+    width: 100% ;
+    /* Учитываем отступы */
+    padding: 2px;
+    margin-top: 2px;
+    /* Отступ сверху поля ввода/выбора */
+    border-radius: 4px;
+    border: 1px solid #828282;
+}
+
+.main-select:focus {
+    border-color: #4CAF50;
+}
+.modal__container{
+    width: 17% ;
+}
+
+.modal_form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal_form-group label {
+    font-weight: 500;
+    color: #333;
+}
+
+.modal_form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #828282;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal_form-group input:focus {
+    border-color: #4CAF50;
+}

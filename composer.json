@@ -1,0 +1,18 @@
+{
+    "name": "301_03/crm",
+    "autoload": {
+        "psr-4": {
+            "30103\\Crm\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "reg",
+            "email": "you@example.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^3.1",
+        "endroid/qr-code": "^6.0"
+    }
+}
