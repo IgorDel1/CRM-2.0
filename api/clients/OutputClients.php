@@ -2,14 +2,13 @@
 require_once 'api/helpers/convertDate.php';
 
 function OutputClients($clients){
-    function convertParams($arr) {
+    function convertParams($arr){
         $params = [];
         foreach ($arr as $key => $value) {
             $params[] = "$key=$value";
-        }
+    }
         return implode('&', $params);
     }
-
     foreach($clients as $client){
         $id = $client['id'];
         $clients_name = $client['name'];
@@ -17,17 +16,19 @@ function OutputClients($clients){
         $phone = $client['phone'];
         $birthday = $client['birthday'];
         $created_at = $client['created_at'];
+
         $birthday = convertDate($birthday);
         $created_at = convertDateTime($created_at);
 
-        $copyParams = $_GET;
-        $copyParams['send-email'] = $email;
-        $queryParams = convertParams($copyParams);
+               
+        // $copyParams = $_GET;
+        // $copyParams['send-email'] = $email;
+        // $queryParams = convertParams($copyParams);
 
         echo "<tr>
         <td>$id</td>
         <td>$clients_name</td>
-        <td><a href='?$queryParams'>$email</a></td>
+        <td><a href='?send-email=$email'>$email</a></td>
         <td>$phone</td>
         <td>$birthday</td>
         <td>$created_at</td>
@@ -54,7 +55,7 @@ function OutputClients($clients){
             >Сформировать</button>
             </form>
         </td>
-        <td onclick='MicroModal.show(\"edit-modal\")'><i class='fa fa-pencil' aria-hidden='true'></i></td>
+        <td><a href='?edit-user=$id'><i class='fa fa-pencil' aria-hidden='true'></i></i></a></td>
         <td><a href='api/clients/DeleteClient.php?id=$id'><i class='fa fa-trash' aria-hidden='true'></i></a></td>
     </tr>";
 }}
